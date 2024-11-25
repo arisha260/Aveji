@@ -1,0 +1,23 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+  // base
+  --font-family: "Roboto", sans-serif;
+  --second-family: "Helvetica", sans-serif;
+  --content-width: 1376px;
+  --container-offset: 2rem;
+  --container-offset-mobile: 1rem;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+  --light-color: #fff;
+  --main-color: #212529;
+  --accent-color: #ddd7c0;
+  --form-color: #e13a3a;
+  --form-color1: #f9c67b;
+
+  // font weight
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+}

@@ -1,0 +1,122 @@
+// базовые подключения
+@use "vars";
+@use "fonts";
+@use "settings";
+
+body{
+  background-color: var(--light-color);
+  transition: all .3s;
+}
+body.active{
+  overflow: hidden;
+  background: rgba(33, 37, 41, 0.5);
+}
+
+.grid{
+  //display: grid;
+  //grid-template-columns: repeat(1, 1fr);
+  //align-items: flex-start;
+}
+
+.title{
+  margin: 0;
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: clamp(2rem, 1.1667rem + 3.876vw, 4.5rem);
+  line-height: 120%;
+  text-transform: uppercase;
+  color: #212529;
+}
+
+.title1{
+  margin: 0;
+  font-family: var(--second-family);
+  font-weight: var(--fw-400);
+  font-size: clamp(1.75rem, 1.3333rem + 1.938vw, 3rem);
+  color: var(--main-color);
+}
+
+.title2{
+  margin: 0;
+  font-family: var(--second-family);
+  font-weight: var(--fw-400);
+  font-size: clamp(1.5rem, 1.25rem + 1.1628vw, 2.25rem);
+  color: var(--main-color);
+}
+
+.text{
+  margin: 0;
+  font-family: var(--font-family);
+  font-weight: var(--fw-400);
+  font-size: 16px;
+  line-height: 140%;
+  color: var(--main-color);
+}
+
+.large-text{
+  margin: 0;
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--main-color);
+}
+
+.button{
+  font-family: var(--font-family);
+  font-weight: var(--fw-400);
+  font-size: 18px;
+  display: inline-block;
+  color: var(--main-color);
+  text-transform: uppercase;
+  position: relative;
+  &::after{
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: currentColor;
+  }
+}
+
+.img{
+  width: 100%;
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.heading-mobile{
+  display: block;
+}
+
+.heading-desktop{
+  display: none;
+}
+
+.col{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.input{
+  padding-top: 0.313rem;
+  padding-bottom: 0.75rem;
+  width: 100%;
+  display: block;
+  transition: 0.3s;
+  background: #ffffff;
+  border-bottom: 1px solid #212529;
+}
+
+.label{
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  transition: 0.3s;
+}
