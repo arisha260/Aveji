@@ -3,12 +3,13 @@
     src: String,
     text: String,
   })
+  const baseUrl = import.meta.env.BASE_URL;
 </script>
 
 <template>
   <li class="project-list__item">
     <div class="img project-list__img">
-      <img :src="src" alt>
+      <img :src="baseUrl + src" alt>
     </div>
     <div class="project-list__desc">
       <p class="text project-list__text">{{ text }}</p>
