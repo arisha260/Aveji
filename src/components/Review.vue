@@ -4,7 +4,7 @@
 
 <template>
   <section class="review">
-    <div class="container review__container">
+    <div class="container review__container" id="review">
       <h1 class="title1 review__title">Отзывы</h1>
       <ul class="list-reset review__list review-list">
         <Content title="Игорь Антонов" text="Обратилась к Aveji по рекомендации. Команда сразу поняла, какой дизайн я хочу. Предоставили несколько вариантов и в течение недели сделали наброски. Итог понравился, все на высшем уровне."/>
@@ -18,8 +18,14 @@
 <style scoped lang="scss">
   .review{
     margin-bottom: 3rem;
+    @media (min-width: 78.75rem){
+      margin-bottom: 6.75rem;
+    }
     &__title{
       margin-bottom: 1.25rem;
+      @media (min-width: 78.75rem){
+        margin-bottom: 2rem;
+      }
     }
   }
 
@@ -27,5 +33,9 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    @media (min-width: 48rem){
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(21.5rem, 1fr));
+    }
   }
 </style>

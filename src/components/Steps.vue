@@ -23,11 +23,23 @@
 <style scoped lang="scss">
   .steps{
     margin-bottom: 3rem;
+    @media (min-width: 78.75rem){
+      margin-bottom: 7.5rem;
+    }
+    &__container{
+      align-items: baseline;
+    }
     &__title{
       margin-bottom: 1.25rem;
+      @media (min-width: 78.75rem){
+        grid-column: 7 span;
+      }
     }
     &__col{
       gap: 1.75rem;
+      @media (min-width: 78.75rem){
+        grid-column: 9/9 span;
+      }
     }
     &__list{
       display: flex;

@@ -35,6 +35,14 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      @media (min-width: 64rem) {
+        align-items: flex-start;
+      }
+    }
+    &__burger{
+      @media (min-width: 64rem) {
+        display: none;
+      }
     }
   }
 </style>

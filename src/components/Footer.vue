@@ -30,24 +30,45 @@
       align-items: center;
       justify-content: center;
       gap: 1.75rem;
+      @media (min-width: 48rem){
+        justify-content: space-between;
+        align-items: flex-end;
+      }
     }
     &__policy{
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      @media (min-width: 48rem){
+        order: 1;
+      }
+      @media (min-width: 64rem){
+        flex-direction: row;
+        gap: 0.5rem;
+        :first-child::after{
+          content: "/";
+          margin-left: 0.5rem;
+        }
+      }
     }
     &__copy{
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      @media (min-width: 48rem){
+        align-items: flex-start;
+      }
     }
   }
 
   .footer-list{
     display: flex;
     gap: 40px;
+    @media (min-width: 48rem){
+      order: 2;
+    }
     &__link{
       text-transform: uppercase;
     }

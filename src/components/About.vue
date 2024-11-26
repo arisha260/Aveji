@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <section class="about">
+  <section class="about" id="about">
     <div class="container about__container grid">
       <h2 class="title1 about__title">
         <span class="heading-mobile about__title-mob">О компании</span>
@@ -36,9 +36,33 @@
 
 <style scoped lang="scss">
   .about{
-    padding-bottom: 3rem;
+    margin-bottom: 3rem;
+    @media (min-width: 78.75rem){
+      margin-bottom: 7.5rem;
+    }
+    &__container{
+      align-items: baseline;
+    }
     &__title{
       margin-bottom: 1.25rem;
+      @media (min-width: 78.75rem){
+        grid-column: 7 span;
+      }
+      &-mob{
+        @media (min-width: 78.75rem){
+          display: none;
+        }
+      }
+      &-desk{
+        @media (min-width: 78.75rem){
+          display: block;
+        }
+      }
+    }
+    &__col{
+      @media (min-width: 78.75rem){
+        grid-column: 9/9 span;
+      }
     }
     &__text-container{
       margin-bottom: 2rem;
@@ -47,10 +71,11 @@
       gap: 1rem;
     }
     &__list{
-      max-width: 7.5625rem;
+      max-width: 9.125rem;
       display: flex;
       flex-direction: column;
       gap: 1.25rem;
+
     }
   }
 </style>
